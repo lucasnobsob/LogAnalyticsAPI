@@ -1,0 +1,56 @@
+# Ignore Visual Studio and Rider specific files
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore temporary files
+*.tmp
+*.log
+*.lck
+
+# Ignore compiled binaries and packages
+*.exe
+*.dll
+*.pdb
+*.app
+*.so
+*.dylib
+*.lib
+*.a
+
+# Ignore NuGet packages and lock files
+packages/
+*.nupkg
+project.lock.json
+.nuget/
+
+# Ignore temporary files from testing and coverage
+TestResults/
+coverage/
+*.coverlet/
+*.trx
+*.coverage
+
+# Ignore publish output
+publish/
+*.publishsettings
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore sensitive environment files
+.env
+secrets.json
+appsettings.*.json
+
+# Ignore JetBrains Rider related files
+.idea/
+*.sln.iml
