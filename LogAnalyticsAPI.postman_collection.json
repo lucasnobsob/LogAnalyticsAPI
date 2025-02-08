@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "fdbea2ed-0163-4cc4-a8da-666c386d50b3",
+		"name": "LogAnalyticsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "613331"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44382/api/logs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:44382/api/logs"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44382/api/logs/search?sourceFields=timestamp,message,level,requestId,url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44382/api/logs/search?sourceFields=timestamp,message,level,requestId,url",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api",
+						"logs",
+						"search"
+					],
+					"query": [
+						{
+							"key": "sourceFields",
+							"value": "timestamp,message,level,requestId,url"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44382/api/logs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"Erro ao processar a requisição\",\n  \"level\": \"Error\",\n  \"timestamp\": \"2025-02-07T14:30:00Z\",\n  \"applicationName\": \"MyApp\",\n  \"environment\": \"Production\",\n  \"requestId\": \"12345abcde\",\n  \"userId\": \"user123\",\n  \"ipAddress\": \"192.168.1.1\",\n  \"url\": \"/api/products/123\",\n  \"httpMethod\": \"POST\",\n  \"exception\": {\n    \"message\": \"Exception message here\",\n    \"stackTrace\": \"Stack trace details here\",\n    \"innerExceptionMessage\": \"Inner exception message\",\n    \"innerExceptionStackTrace\": \"Inner exception stack trace\"\n  },\n  \"performance\": {\n    \"executionTime\": \"00:00:10\",\n    \"memoryUsage\": 1024000\n  },\n  \"threadId\": \"123\",\n  \"customFields\": {\n    \"transactionId\": \"txn123456\",\n    \"region\": \"US-East\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:44382/api/logs"
+			},
+			"response": []
+		}
+	]
+}
